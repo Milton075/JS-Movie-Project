@@ -128,27 +128,11 @@ nav {
 .fa-x {
 	position: absolute;
 	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
+	right: 0;
+	width: 5%;
 	cursor: pointer;
 	transition: opacity 0.3s ease-in-out;
 	color: mediumslateblue;
-}
-
-.fa-x {
-	opacity: 0;
-	visibility: hidden;
-}
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
 }
 
 .menu__backdrop {
@@ -201,11 +185,6 @@ nav {
 	font-size: 30px;
 	cursor: pointer;
 }
-
-
-
-    
-
 
 
 /*

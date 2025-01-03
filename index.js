@@ -3,6 +3,7 @@
 function toggleSpinner() {
     const spinner = document.getElementById("spinner");
     spinner.style.display = "inline-block"; // Show the spinner
+}
 
 function openMenu() {
 	document.body.classList += " menu--open"
@@ -27,4 +28,4 @@ function closeMenu() {
    xSign.style.visibility = 'hidden';
    }
    });
-}  
+  
