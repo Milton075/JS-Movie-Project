@@ -14,7 +14,7 @@ a {
 	text-decoration: none;
 }
 
-img {
+.movie__img {
 	margin-top: 60px;
 	height: 40vh;
 	display: block;
@@ -42,7 +42,7 @@ nav {
 	padding: 0 50px;
 	max-width: 1150px;
 	width: 100%;
-	height: 165px;
+	height: 120px;
 }
 
 .nav__link--list {
@@ -137,7 +137,8 @@ h1 {
 	color:royalblue;
 	white-space: nowrap;
 	margin-bottom: 30px;
-	animation: fadeInUp 1.5s forwards; 
+	animation: fadeInUp 1.0s forwards; 
+	animation-delay: 400ms;
 }
 
 h2 {
@@ -147,7 +148,8 @@ h2 {
 	line-height: 1.5;
 	text-transform: uppercase;
 	margin-bottom: 50px;
-	animation: fadeInUp 4.0s forwards; 
+	animation: fadeInUp 2.0s forwards; 
+	animation-delay: 500ms;
 }
 
 input {
@@ -159,7 +161,8 @@ input {
 	font-size: 24px;
 	padding: 0 15px;
 	padding-left: 25px;
-	animation: fadeInUp 5.5s forwards; 
+	animation: fadeInUp 2.0s forwards; 
+	animation-delay: 600ms;
 }
 
 .input__wrapper {
@@ -180,7 +183,8 @@ input {
 	box-shadow: 7px 7px 14px rgba(134, 93, 204, .3);
 	cursor: pointer;
 	transition: all 300ms ease;
-	animation: fadeInUp 5.5s forwards; 
+	animation: fadeInUp 2.0s forwards; 
+	animation-delay: 600ms;
 }
 
 .not__loading:hover {
@@ -204,3 +208,43 @@ h1, h2, input, button {
         transform: translateY(0); 
     }
 }
+
+/*
+
+MODAL
+
+*/
+
+.fa-spinner {
+	animation: spinner 750ms infinite linear;
+	transition-delay: 600ms;
+	color: white;
+	}
+	
+	@keyframes spinner {
+		0% {
+			transform: rotate(0);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
+
+	.modal__overlay {
+		position: absolute;
+		border-radius: 20px;
+	}
+
+	.modal__overlay--loading {
+		display: flex;
+    	height: 70px;
+    	align-items: center;
+    	width: 150px;
+    	justify-content: center;
+		background-color: #242424;
+		font-size: 40px;
+		top: 0;
+		visibility: hidden;
+
+	}
+
