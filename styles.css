@@ -131,7 +131,7 @@ nav {
 	right: 0;
 	width: 5%;
 	cursor: pointer;
-	transition: opacity 0.3s ease-in-out;
+	transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
 	color: mediumslateblue;
 }
 
