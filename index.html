@@ -11,7 +11,7 @@
 <body>
 	<section id="landing-page">
 <nav>
-		<figure>
+		<figure class="logo__wrapper">
 	 <img id="personal__logo" src="./asset/rb_2150822412.png" alt="personal__logo--img">
 	</figure>
 	<ul class="nav__link--list">
@@ -40,9 +40,9 @@
 		<img  class="nav__icon click" src="./asset/bento.png" alt="">
 </div>
 <div class="menu__backdrop">
-	<div class="btn__menu--close" onclick="closeMenu()"> 
-		<i class="fa-solid fa-x"></i>
-	</div>
+	
+		<i class="fa-solid fa-x" onclick="closeMenu()"></i>
+	
 	<ul class="menu__links">
 		<li class="menu__link">Home</li>
 		<li class="menu__link">Find your Movie</li>
@@ -60,7 +60,7 @@
 </header>
 <div class="input__wrapper">
 	<input type="text" placeholder="Search by Title or Keyword">
-<button class="not__loading" onclick="toggleSpinner()"><i class="fa-solid fa-magnifying-glass"></i>
+<button class="not__loading" type="submit" onclick="toggleSpinner()"><i class="fa-solid fa-magnifying-glass"></i>
 	<div class="modal__overlay modal__overlay--loading">
 		<i class="fa-solid fa-spinner"></i>
 	</div></button>

@@ -10,6 +10,20 @@ function closeMenu() {
 	document.body.classList.remove('menu--open')
    }
 
+   function search(event) {
+    event.preventDefault();
+    const loading = document.querySelector('.modal__overlay--loading')
+   loading.classList += " modal__overlay--visible";
+    .then(() => {
+    loading.classList.remove("modal__overlay--visible")
+     success.classList += " modal__overlay--visible"
+      }).catch(() => {
+        loading.classList.remove("modal__overlay--visible")
+      ;
+   })
+   }
+  
+
 const iconContainer = document.querySelector('.icon-container');
 const boxIcon = document.querySelector('.nav__icon');
 const xSign = document.querySelector('.fa-x');
