@@ -1,7 +1,3 @@
-function toggleSpinner() {
-    const spinner = document.getElementById("spinner");
-    spinner.style.display = "inline-block"; // Show the spinner
-}
 
 function openMenu() {
 	document.body.classList += " menu--open"
@@ -10,12 +6,31 @@ function closeMenu() {
 	document.body.classList.remove('menu--open')
    }
 
-   // JavaScript
-document.getElementById('not_loading').addEventListener('click', function() {
-  // Show the loading modal
-  document.getElementById('modal__overlay--loading').style.display = 'block';
-});
+   document.addEventListener('DOMContentLoaded', () => {
+    // Select all elements with the class 'not__loading'
+    const searchButtons = document.querySelectorAll('.not__loading');
+    console.log(searchButtons);
 
+    searchButtons.forEach(button => { 
+        button.addEventListener('click', function() {
+       //     // Change button class to indicate loading
+            this.classList.remove('not__loading'); // Remove the not loading class
+            this.classList.add('loading'); // Add a loading class
+
+            // Show the spinner
+            const spinner = this.querySelector('.modal__overlay');
+            spinner.classList.add('modal__overlay'); // Show the spinner
+
+            // Simulate loading time
+            setTimeout(() => {
+               //  After loading, you can reset the button if needed
+                this.classList.add('not__loading'); // Reset the button class
+                this.classList.remove('loading'); // Remove loading class
+                spinner.classList.remove('modal__overlay'); // Hide the spinner
+            }, 3000); // Simulate a 3-second loading time
+        });
+    });
+});
 const iconContainer = document.querySelector('.icon-container');
 const boxIcon = document.querySelector('.nav__icon');
 const xSign = document.querySelector('.fa-x');

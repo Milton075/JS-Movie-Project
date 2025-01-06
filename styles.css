@@ -246,6 +246,7 @@ input {
 
 .not__loading {
 	width: 150px;
+	height: 70px;
 	font-size: 40px;
 	border-radius: 20px;
 	margin-left: 20px;
@@ -305,28 +306,33 @@ MODAL
 	.modal__overlay {
 		position: absolute;
 		border-radius: 20px;
-		z-index: -1;
-	}
-
-	.modal__overlay--loading {
-		display: flex;
-    	height: 70px;
-    	align-items: center;
-    	width: 150px;
-    	justify-content: center;
-		background-color: #242424;
-		font-size: 40px;
-		top: 0;
-	}
-
-	.modal__overlay--loading:active, .fa-magnifying-glass {
 		display: none;
 	}
 
-	.modal__overlay--visible {
-		z-index: 1;
-		display: flex;
+	.modal__overlay--loading {
+		background-color: #242424;
+		border-radius: 20px;
+		font-size: 40px;
+		height: 70px;
+    	width: 150px;
+		top: 0;
+		top: 50%;
+   	 	left: 50%;
+   		transform: translate(-50%, -50%);
 	}
+
+	.loading {
+		background-color: black;
+		color: transparent;
+		cursor: not-allowed;
+		position: relative;
+	}
+
+	.loading, 
+	.fa-spinner {
+		visibility: visible; 
+	}
+
 
 	@media (max-width:768px) {
 
