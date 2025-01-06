@@ -27,7 +27,7 @@ function closeMenu() {
                 this.classList.add('not__loading'); // Reset the button class
                 this.classList.remove('loading'); // Remove loading class
                 spinner.classList.remove('modal__overlay'); // Hide the spinner
-            }, 3000); // Simulate a 3-second loading time
+            }, 300); // Simulate a 1-second loading time
         });
     });
 });

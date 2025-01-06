@@ -245,6 +245,7 @@ input {
 }
 
 .not__loading {
+	position: relative;
 	width: 150px;
 	height: 70px;
 	font-size: 40px;
@@ -289,9 +290,14 @@ MODAL
 */
 
 .fa-spinner {
+	position: relative;
 	animation: spinner 750ms infinite linear;
 	transition-delay: 600ms;
 	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 100%;
 	}
 	
 	@keyframes spinner {
@@ -311,6 +317,7 @@ MODAL
 
 	.modal__overlay--loading {
 		background-color: #242424;
+		position: absolute;
 		border-radius: 20px;
 		font-size: 40px;
 		height: 70px;
@@ -319,6 +326,7 @@ MODAL
 		top: 50%;
    	 	left: 50%;
    		transform: translate(-50%, -50%);
+
 	}
 
 	.loading {
