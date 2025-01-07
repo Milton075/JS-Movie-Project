@@ -242,6 +242,7 @@ input {
 	display: flex;
 	justify-content: center;
 	position: relative;
+	margin-top: 40px;
 }
 
 .not__loading {
@@ -285,19 +286,49 @@ h1, h2, input, button {
 
 /*
 
+IMAGE SLIDER
+
+*/
+
+.container {
+	width: 70%;
+	height: 450px;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	margin: 0 auto;
+}
+
+.container img {
+	width: 20%;
+	height: 100%;
+	border-radius: 10px;
+	border: 2px solid rgba(10, 9, 9, 0.6);
+	transition: all ease-in-out 0.5s;
+	animation: fadeInUp 3.0s forwards; 
+}
+
+
+.container img:hover {
+	width: 50%;
+}
+
+/*
+
 MODAL
 
 */
 
 .fa-spinner {
-	position: relative;
+	
 	animation: spinner 750ms infinite linear;
 	transition-delay: 600ms;
 	color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 100%;
+	margin-top: 15px;
+	
 	}
 	
 	@keyframes spinner {
@@ -313,20 +344,21 @@ MODAL
 		position: absolute;
 		border-radius: 20px;
 		display: none;
+	
 	}
 
 	.modal__overlay--loading {
 		background-color: #242424;
-		position: absolute;
 		border-radius: 20px;
 		font-size: 40px;
 		height: 70px;
     	width: 150px;
+		position: absolute;
 		top: 0;
 		top: 50%;
    	 	left: 50%;
    		transform: translate(-50%, -50%);
-
+		
 	}
 
 	.loading {
@@ -362,6 +394,15 @@ MODAL
 			visibility: visible;
 			top: 20px;
 			width: 40px;
+		}
+
+		.container {
+			width: 80%;
+			height: 300px;
+		}
+
+		.container img:hover {
+			width: 50%;
 		}
 	}
 
@@ -410,6 +451,14 @@ MODAL
 
 		nav {
 		padding: 0;
+		}
+
+		.container {
+			height: 250px;
+		}
+
+		.container img:hover {
+			width: 30%;
 		}
 
 	}
