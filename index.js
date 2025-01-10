@@ -1,4 +1,42 @@
 
+const API_URL = 'https://www.omdbapi.com/?apikey=a06bdca6&s='; 
+
+document.getElementById('searchButton').addEventListener('click', () => {
+    const searchTerm = document.getElementById('searchInput').value;
+    searchMovies(searchTerm);
+});
+
+async function searchMovies(title) {
+    const response = await fetch(`${API_URL}&s=${encodeURIComponent(title)}`);
+    const data = await response.json();
+    displayMovies(data.Search);
+}
+
+function displayMovies(movies) {
+    const moviesContainer = document.querySelector('.movies');
+    moviesContainer.innerHTML = ''; // Clear previous results
+
+    if (movies) {
+        movies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('movie');
+            movieDiv.innerHTML = `
+                <figure class="movie__img--wrapper">
+                    <img class="movie__img--search" src="${movie.Poster !== "N/A" ? movie.Poster : 'placeholder.jpg'}" alt="${movie.Title}">
+                </figure>
+                <div class="movie__content">
+                    <h3>${movie.Title}</h3>
+                    <p>Year: ${movie.Year}</p>
+                    <p>Type: ${movie.Type}</p>
+                </div>
+            `;
+            moviesContainer.appendChild(movieDiv);
+        });
+    } else {
+        moviesContainer.innerHTML = '<p>No movies found.</p>';
+    }
+}
+
 function openMenu() {
 	document.body.classList += " menu--open"
    }
