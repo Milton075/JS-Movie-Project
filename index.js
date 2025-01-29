@@ -2,11 +2,11 @@
 //const API_URL = 'https://www.omdbapi.com/?apikey=a06bdca6&s='; 
 
 async function main() {
-    const movies = await fetch("https://www.omdbapi.com/?apikey=a06bdca6&s=lion");
+    const movies = await fetch("https://www.omdbapi.com/?apikey=a06bdca6&s=fast");
     const moviesData = await movies.json();
     const movieListEl = document.querySelector('.movies');
     console.log(moviesData);
-    movieListEl.innerHTML = moviesData
+    movieListEl.innerHTML = moviesData.Search
     .map(
         (movie) =>  
     `<div class="movie">
